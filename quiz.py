@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Quiz',page_icon='📚')
 
-st.title('Online Quiz 📚')
+st.title('Online Quiz 🧠')
 
 if 'data' not in st.session_state:
     st.session_state.data = [] 
@@ -77,7 +77,7 @@ elif menu=='Delete':
              st.success('Deleted Sucessfully')
 
 elif menu == 'Play':
-    st.subheader('Play Quiz 🎯')
+    st.subheader('Play Quiz ✔️')
 
     if not st.session_state.data:
         st.info('No questions available')
@@ -106,27 +106,4 @@ elif menu == 'Play':
 
             st.success(f"Your Score: {score} / {len(user_answers)}")
 
-        
-    
-    # elif menu == 'Play':
-    # st.subheader('Play Quiz 🎮')
-    # if not st.session_state.data:
-    #     st.info('No questions available')
-    # else:
-    #     score = 0
-    #     for i in range(len(st.session_state.data)):
-    #         q = st.session_state.data[i]
-
-    #         st.write(f"Q{i+1}. {q[0]}")
-
-    #         user_answer = st.radio(
-    #             'Choose an option:',
-    #             [q[1], q[2], q[3], q[4]],
-    #             key=i
-    #         )
-    #         if st.button(f"Check Q{i+1}"):
-    #             if user_answer == st.session_state.ans[i]:
-    #                 st.success("Correct ✅")
-    #             else:
-    #                 st.error("Wrong ❌")
  
